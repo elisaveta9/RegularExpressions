@@ -24,6 +24,9 @@ public class UrlRegexTests {
 
     @Test
     public void withoutTopLevelDomain() { assertFalse(Regex.IsUrl("https://#fragment")); }
+    
+    @Test
+    public void nullDomainName() { assertFalse(Regex.IsUrl("https://example..org")); }
 
     @Test
     public void correctUrl1() { assertTrue(Regex.IsUrl("https://example.org/")); }
