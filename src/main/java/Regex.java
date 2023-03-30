@@ -15,7 +15,7 @@ public class Regex {
     }
 
     public static boolean IsUrl(String str){
-        String UrlRegex = "^https?:\\/\\/(www\\.)?[-a-zA-Z\\d@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z\\d()@:%_\\+.~#?&//=]*)";
+        String UrlRegex = "^https?://([а-яА-я\w@:%\+~#=]+\.)+[а-яА-Яa-zA-Z]{2,6}(/?|(/([а-яА-я\w()@:%\+.~#?&=]+))*/?)$";
         return Pattern.matches(UrlRegex,str);
     }
 
